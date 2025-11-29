@@ -1,0 +1,421 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+.navbar {
+    width: 100%;
+    padding: 1rem 0;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo_name {
+    color: #ffffff;
+}
+
+.logo-img {
+    width: 40px;
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f97316;
+}
+
+
+.sign-in {
+    background-color: transparent;
+    color: white;
+    border: 1px solid #ffffff;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-in:hover {
+    background-color: rgba(180, 180, 180, 0.13);
+    transform: translateY(-2px);
+}
+
+
+.menu-btn {
+    display: none;
+    font-size: 2rem;
+    color: #ffffff;
+    cursor: pointer;
+    z-index: 1500;
+}
+
+
+.contact {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding-top: 100px;
+}
+
+.contact .hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.contact .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 2;
+}
+
+.contact-container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 80px 0;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-left {
+    width: 40%;
+}
+
+.contact-logo {
+    width: 65px;
+    margin-bottom: 25px;
+}
+
+.contact-left h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.contact-left p {
+    opacity: 0.9;
+    font-size: 1.2rem;
+    max-width: 450px;
+}
+
+.contact-right {
+    width: 55%;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0);
+    border-radius: 10px;
+}
+
+.row {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.input-box {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-box label {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.input-box input,
+.input-box textarea {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid rgba(255,255,255,0.6);
+    padding: 12px 0;
+    color: white;
+    outline: none;
+    font-size: 1.05rem;
+}
+
+.input-box textarea {
+    height: 150px;
+    resize: vertical;
+}
+
+.full {
+    margin-bottom: 30px;
+}
+
+.send-btn {
+    background: #ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-weight: 700;
+    transition: 0.3s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.send-btn:hover {
+    background: #ea580c;
+    transform: translateY(-1px);
+}
+
+
+@media (max-width: 1024px) {
+    .contact-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 90%;
+    }
+
+    .contact-left p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar {
+        padding: 0.7rem 0;
+    }
+
+    .navbar .container {
+        padding: 0 15px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        flex-direction: column;
+        gap: 1rem;
+        background: rgba(0,0,0,0.8);
+        padding: 1rem 1.5rem;
+        border-radius: 10px;
+        backdrop-filter: blur(10px);
+        width: 200px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .logo {
+        font-size: 1.25rem;
+        gap: 6px;
+    }
+
+    .logo-img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .sign-in {
+        padding: 0.5rem 1.2rem;
+        font-size: 0.85rem;
+        width: 100%;
+        text-align: center;
+    }
+
+
+    .contact {
+        padding-top: 120px;
+    }
+
+    .contact-left h1 {
+        font-size: 2.6rem;
+    }
+
+    .contact-left p {
+        font-size: 1.05rem;
+    }
+
+    .contact-container {
+        padding: 40px 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+    }
+
+    .contact-left,
+    .contact-right {
+        width: 100%;
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .input-box input,
+    .input-box textarea {
+        font-size: 1rem;
+    }
+
+    .send-btn {
+        width: 100%;
+        padding: 16px;
+        font-size: 1rem;
+        border-radius: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 1rem;
+    }
+
+    .logo-img {
+        width: 28px;
+        height: 28px;
+    }
+
+    .sign-in {
+        padding: 0.7rem 1rem;      
+        font-size: 0.9rem;         
+        border-radius: 8px;         
+        width: 100%;               
+        text-align: center;         
+        display: block;            
+        margin-top: 10px;          
+    }
+
+    .contact-left h1 {
+        font-size: 2.1rem;
+    }
+
+    .contact-left p {
+        font-size: 0.95rem;
+    }
+
+    .contact-container {
+        padding: 20px 0;
+    }
+
+    .contact-left {
+        text-align: center;
+    }
+
+    .contact-logo {
+        width: 55px;
+    }
+
+    .contact-right {
+        padding: 20px 0;
+    }
+
+    .input-box label {
+        font-size: 0.85rem;
+    }
+
+    .input-box textarea {
+        height: 130px;
+    }
+
+    .send-btn {
+        padding: 14px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .logo {
+        font-size: 0.9rem;
+    }
+
+    .sign-in {
+        padding: 0.6rem 0.9rem;
+        font-size: 0.85rem;
+        border-radius: 8px;
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin-top: 10px;
+    }
+
+    .contact-left h1 {
+        font-size: 1.8rem;
+    }
+
+    .contact-left p {
+        font-size: 0.9rem;
+    }
+
+    .input-box input,
+    .input-box textarea {
+        font-size: 0.9rem;
+    }
+}

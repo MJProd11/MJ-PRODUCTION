@@ -1,0 +1,205 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+line-height: 1.6;
+min-height: 100vh;
+overflow-x: hidden;
+}
+
+.container {
+max-width: 1400px;
+margin: 0 auto;
+padding: 0 20px;
+}
+
+
+.navbar {
+width: 100%;
+padding: 1rem 0;
+position: fixed;
+top: 0;
+z-index: 1000;
+background: rgba(0, 0, 0, 0.15);
+backdrop-filter: blur(6px);
+-webkit-backdrop-filter: blur(6px);
+border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+min-height: 60px;
+}
+
+.navbar .container {
+display: flex;
+justify-content: space-between;
+align-items: center;
+position: relative; 
+}
+
+
+.logo {
+display: flex;
+align-items: center;
+gap: 10px;
+font-size: 1.5rem;
+font-weight: bold;
+cursor: pointer;
+}
+
+.logo_name {
+color: #ffffff;
+}
+
+.logo-img {
+width: 40px;
+height: 40px;
+}
+
+
+.nav-links {
+display: flex;
+gap: 2rem;
+position: absolute;
+left: 50%;
+transform: translateX(-50%);
+align-items: center;
+}
+
+.nav-links a {
+text-decoration: none;
+color: #ffffff;
+font-weight: 500;
+transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+color: #f97316; 
+}
+
+
+.sign-in {
+background-color: transparent;
+color: white;
+border: 1px solid #ffffff;
+padding: 0.7rem 1.5rem;
+border-radius: 10px;
+cursor: pointer;
+font-weight: 600;
+transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.sign-in:hover {
+background-color: rgba(180, 180, 180, 0.13);
+transform: translateY(-2px);
+}
+
+
+#video-background {
+position: fixed;
+right: 0;
+bottom: 0;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+z-index: -100;
+overflow: hidden;
+filter: brightness(0.5);
+}
+
+
+.content-wrapper {
+position: relative;
+z-index: 10;
+min-height: 100vh;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding-top: 80px;
+}
+
+
+.swiper {
+width: 100%;
+padding-top: 50px;
+padding-bottom: 80px;
+}
+
+.swiper-slide {
+background-position: center;
+background-size: cover;
+width: 300px;
+height: 420px;
+border-radius: 20px;
+-webkit-box-reflect: below 1px linear-gradient(transparent, transparent, #0006);
+}
+
+@media (min-width: 768px) {
+.swiper-slide {
+width: 350px;
+height: 480px;
+}
+}
+
+.swiper-slide img {
+display: block;
+width: 100%;
+height: 100%;
+object-fit: cover;
+border-radius: 20px;
+}
+
+.card-content {
+background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 50%, rgba(0,0,0,0) 100%);
+}
+
+.swiper-button-prev, .swiper-button-next {
+color: #1f2937;
+background: white;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.swiper-button-prev::after, .swiper-button-next::after {
+content: none;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover {
+background-color: #f3f4f6;
+transform: scale(1.05);
+transition: all 0.2s;
+}
+
+.swiper-pagination-bullet {
+background: #9ca3af;
+opacity: 0.5;
+width: 10px;
+height: 10px;
+}
+
+.swiper-pagination-bullet-active {
+background: #f97316;
+opacity: 1;
+width: 24px;
+border-radius: 8px;
+transition: width 0.3s;
+}
+
+.paragraph {
+  color: #f3f4f6;
+  margin-top: 50px;
+  font-weight: 900;
+}
+
+
+
